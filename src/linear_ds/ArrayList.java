@@ -20,10 +20,20 @@ public class ArrayList {
         nums[count++] = item;
     }
 
+    public void removeAt(int index){
+        if(index < 0 || index >= count)
+            throw new IllegalArgumentException();
+
+        for(int i = index; i < count - 1; i++)
+            nums[i] = nums[i + 1];
+
+        count--;
+    }
+
     @Override
     public String toString() {
         return "ArrayList{" +
-                "nums=" + Arrays.toString(nums) +
+                "nums=" + Arrays.toString(Arrays.copyOfRange(nums, 0, count)) +
                 '}';
     }
 }
