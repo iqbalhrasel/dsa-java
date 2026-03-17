@@ -1,19 +1,18 @@
 import linear_ds.ArrayList;
+import linear_ds.LinkedList;
 
 public class Main{
     public static void main(String [] args) {
-        var list = new ArrayList(3);
-        list.insert(10);
-        list.insert(20);
-        list.insert(30);
-        list.insert(40);
-        list.insert(50);
-        list.insert(60);
-        list.insert(70);
+        var list = new LinkedList();
+        list.addLast(10);
+        list.addLast(20);
+        list.addLast(30);
+        list.addLast(40);
+        list.addLast(50);
+        list.addLast(60);
+        list.addLast(70);
 
-        System.out.println(list.indexOf(400));
-
-        System.out.println(list);
+        System.out.println("done");
     }
 }
 
