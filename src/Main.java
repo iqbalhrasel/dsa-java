@@ -10,7 +10,7 @@ public class Main{
         list.addLast(40);
         list.addLast(50);
         list.addLast(60);
-        list.addLast(70);
+        list.addFirst(5);
 
         System.out.println("done");
     }

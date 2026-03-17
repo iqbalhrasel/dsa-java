@@ -25,4 +25,15 @@ public class LinkedList {
         }
         count++;
     }
+
+    public void addFirst(int item){
+        var node = new Node(item);
+        if(head == null){
+            head = tail = node;
+        } else {
+            node.next = head;
+            head = node;
+        }
+        count++;
+    }
 }
