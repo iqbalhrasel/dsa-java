@@ -24,10 +24,21 @@ public class ArrayList {
         if(index < 0 || index >= count)
             throw new IllegalArgumentException();
 
-        for(int i = index; i < count - 1; i++)
+        for(int i = index; i < count - 1; i++) {
             nums[i] = nums[i + 1];
+            nums[i + 1] = 0;
+        }
 
         count--;
+    }
+
+    public int indexOf(int item){
+        for(int i = 0; i < count; i++){
+            if(nums[i] == item)
+                return i;
+        }
+
+        return -1;
     }
 
     @Override
