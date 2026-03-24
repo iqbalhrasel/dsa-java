@@ -12,7 +12,9 @@ public class Main{
         list.addLast(60);
         list.addFirst(5);
 
-        System.out.println(list.contains(60));
+        list.removeFirst();
+
+        System.out.println("done");
     }
 }
 

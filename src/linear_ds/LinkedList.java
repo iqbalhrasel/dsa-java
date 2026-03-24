@@ -54,4 +54,10 @@ public class LinkedList {
     public boolean contains(int item){
         return indexOf(item) >= 0;
     }
+
+    public void removeFirst(){
+        var temp = head.next;
+        head.next = null;
+        head = temp;
+    }
 }
