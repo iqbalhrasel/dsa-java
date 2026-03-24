@@ -36,4 +36,18 @@ public class LinkedList {
         }
         count++;
     }
+
+    public int indexOf(int item){
+        var current = head;
+        int index = 0;
+
+        while (current != null){
+            if(current.value == item)
+                return index;
+            current = current.next;
+            index++;
+        }
+
+        return -1;
+    }
 }
