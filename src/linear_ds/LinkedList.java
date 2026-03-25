@@ -56,6 +56,15 @@ public class LinkedList {
     }
 
     public void removeFirst(){
+        if(head == null)
+            return;
+
+        if (head == tail){
+            head = null;
+            tail = null;
+            return;
+        }
+
         var temp = head.next;
         head.next = null;
         head = temp;
@@ -63,6 +72,15 @@ public class LinkedList {
     }
 
     public void removeLast(){
+        if(head == null)
+            return;
+
+        if (head == tail){
+            head = null;
+            tail = null;
+            return;
+        }
+
         var current = head;
 
         while (current.next != tail){
