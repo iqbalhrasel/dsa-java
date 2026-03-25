@@ -59,5 +59,18 @@ public class LinkedList {
         var temp = head.next;
         head.next = null;
         head = temp;
+        count--;
+    }
+
+    public void removeLast(){
+        var current = head;
+
+        while (current.next != tail){
+            current = current.next;
+        }
+
+        current.next = null;
+        tail = current;
+        count--;
     }
 }

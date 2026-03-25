@@ -13,6 +13,7 @@ public class Main{
         list.addFirst(5);
 
         list.removeFirst();
+        list.removeLast();
 
         System.out.println("done");
     }
