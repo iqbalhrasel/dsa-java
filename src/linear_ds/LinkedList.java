@@ -95,4 +95,16 @@ public class LinkedList {
     public int size(){
         return count;
     }
+
+    public int[] toArrays(){
+        var current = head;
+
+        int[] nums = new int[count];
+        for(int i = 0; i < count; i++){
+            nums[i] = current.value;
+            current = current.next;
+        }
+
+        return nums;
+    }
 }

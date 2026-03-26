@@ -1,6 +1,8 @@
 import linear_ds.ArrayList;
 import linear_ds.LinkedList;
 
+import java.util.Arrays;
+
 public class Main{
     public static void main(String [] args) {
         var list = new LinkedList();
@@ -16,7 +18,7 @@ public class Main{
         list.removeLast();
 
         System.out.println("done");
-        System.out.println(list.size());
+        System.out.println(Arrays.toString(list.toArrays()));
     }
 }
 
