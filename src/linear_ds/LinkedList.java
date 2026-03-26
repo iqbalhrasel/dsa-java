@@ -91,4 +91,8 @@ public class LinkedList {
         tail = current;
         count--;
     }
+
+    public int size(){
+        return count;
+    }
 }

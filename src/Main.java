@@ -16,6 +16,7 @@ public class Main{
         list.removeLast();
 
         System.out.println("done");
+        System.out.println(list.size());
     }
 }
 
