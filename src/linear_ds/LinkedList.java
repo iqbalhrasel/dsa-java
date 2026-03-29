@@ -102,7 +102,6 @@ public class LinkedList {
         int[] nums = new int[count];
         int index = 0;
         while (current != null){
-            System.out.println(current.value);
             nums[index++] = current.value;
             current = current.next;
         }
@@ -111,6 +110,9 @@ public class LinkedList {
     }
 
     public void reverse(){
+        if(head == null)
+            return;
+
         var prev = head;
         var curr = head.next;
 
@@ -124,5 +126,24 @@ public class LinkedList {
         tail = head;
         head = prev;
         tail.next = null;
+    }
+
+    public int getNthFromEnd(int n){
+        if(n > count)
+            throw new IllegalArgumentException();
+
+        var a = head;
+        var b = head;
+
+        for(int i = 0; i<n-1; i++){
+            b = b.next;
+        }
+
+        while (b != tail){
+            a = a.next;
+            b = b.next;
+        }
+
+        return a.value;
     }
 }

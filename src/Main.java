@@ -14,9 +14,12 @@ public class Main{
         list.addLast(60);
         list.addFirst(5);
 
-        list.removeFirst();
-        list.removeLast();
-        list.reverse();
+        var ans = list.getNthFromEnd(2);
+        System.out.println(ans);
+//
+//        list.removeFirst();
+//        list.removeLast();
+//        list.reverse();
 
         System.out.println("done");
         System.out.println(Arrays.toString(list.toArrays()));
