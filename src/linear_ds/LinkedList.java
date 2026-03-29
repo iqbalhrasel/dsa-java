@@ -100,11 +100,29 @@ public class LinkedList {
         var current = head;
 
         int[] nums = new int[count];
-        for(int i = 0; i < count; i++){
-            nums[i] = current.value;
+        int index = 0;
+        while (current != null){
+            System.out.println(current.value);
+            nums[index++] = current.value;
             current = current.next;
         }
 
         return nums;
+    }
+
+    public void reverse(){
+        var prev = head;
+        var curr = head.next;
+
+        while (curr != null){
+           var temp = curr.next;
+           curr.next = prev;
+           prev = curr;
+           curr = temp;
+        }
+
+        tail = head;
+        head = prev;
+        tail.next = null;
     }
 }
